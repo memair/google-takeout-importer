@@ -2,7 +2,7 @@ from setuptools import setup, find_packages
 
 setup(
   name='gtmem',
-  version='0.2',
+  version='0.3',
   description='Google Takeout importer for Memair',
   long_description=open('README.rst').read(),
   url='https://github.com/memair/google-takeout-impoter',
