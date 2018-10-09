@@ -39,8 +39,6 @@ def main():
   total_locations_count = getl.sql("SELECT COUNT('cats') FROM locations")[0][0]
   print(f'{datetime.datetime.now()} {total_locations_count} locations extracted')
 
-  print(f'{datetime.datetime.now()} importing locations since {last_import_at}')
-
   locations_count = getl.sql(f"SELECT COUNT('cats') FROM locations WHERE timestamp >= '{last_import_at}'")[0][0]
   print(f'{datetime.datetime.now()} {locations_count} since {last_import_at}')
 
