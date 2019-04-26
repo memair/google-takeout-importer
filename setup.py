@@ -2,7 +2,7 @@ from setuptools import setup, find_packages
 
 setup(
   name='gtmem',
-  version='0.5',
+  version='0.6',
   description='Google Takeout importer for Memair',
   long_description=open('README.rst').read(),
   url='https://github.com/memair/google-takeout-impoter',
@@ -19,7 +19,7 @@ setup(
   keywords='memair, quantified self, extended mind, lifelogging',
   packages=find_packages(),
   python_requires='>=3',
-  install_requires=['memair', 'getl==0.3'],
+  install_requires=['memair>=2.0', 'getl==0.3'],
   entry_points = {
     'console_scripts': ['gtmem=gtmem.command_line:main'],
   },
