@@ -69,7 +69,7 @@ def main():
 
     bulk_query_string = f'''
       mutation{{
-        BulkCreate(
+        Create(
           locations: [
             {location_query_string}
           ]
@@ -85,9 +85,9 @@ def main():
     print(f'{datetime.datetime.now()} uploading {query_kb} KBytes')
     results       = user.query(bulk_query_string)
     # if results contains errors
-    batch_id      = results['data']['BulkCreate']['id']
-    records_total = results['data']['BulkCreate']['records_total']
-    print(f'{datetime.datetime.now()} Bulk Create "{batch_id}" created with {records_total} records accepted, waiting {sleep_time} seconds')
+    batch_id      = results['data']['Create']['id']
+    records_total = results['data']['Create']['records_total']
+    print(f'{datetime.datetime.now()} Create "{batch_id}" created with {records_total} records accepted, waiting {sleep_time} seconds')
     sleep(sleep_time)
 
   print(f'{datetime.datetime.now()} finished!')
