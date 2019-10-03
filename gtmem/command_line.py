@@ -10,7 +10,7 @@ import datetime
 def main():
   source = "Google Takeout Location History"
   batch_size = 10000
-  sleep_time = 5 #seconds
+  sleep_time = 0.5 #seconds
 
   parser = OptionParser()
   parser.add_option("-g", "--google-takeout-directory", dest="google_takeout_directory", help="Google Takeout Directory", metavar="DIRECTORY")
